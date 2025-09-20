@@ -5,3 +5,9 @@ output: github_document
 date: "2025-09-20"
 ---
 
+## Problem 1
+```{r}
+library(moderndive)
+data("early_january_weather")
+```
+
