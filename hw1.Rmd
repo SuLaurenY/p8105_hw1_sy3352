@@ -11,3 +11,6 @@ library(moderndive)
 data("early_january_weather")
 ```
 
+The dataset is made of weather data for LGA, JFK, and EWR in early January 2013. It includes data of 15 variables, which are: `r paste(names(early_january_weather), collapse = ", ")`.  
+The dataset contains `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns of data.  
+The temperature that can be concluded during this period of time is `r mean(early_january_weather$temp)`
