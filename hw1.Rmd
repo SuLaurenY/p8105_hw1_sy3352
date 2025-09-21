@@ -55,3 +55,17 @@ mean(prob2_df |> pull(vec_factor))
 ```
 
 By trying to take the mean of each variable, "vec_logical" worked, the other two didn't.
+
+Apply **as.numeric** function.
+```{r, results='hide'}
+num_logical = prob2_df |> pull(vec_logical) |> as.numeric()
+num_char = prob2_df |> pull(vec_char) |> as.numeric()
+num_factor = prob2_df |> pull(vec_factor) |> as.numeric()
+```
+
+```{r}
+mean(num_logical)
+mean(num_char)
+mean(num_factor)
+```
+
