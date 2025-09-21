@@ -40,10 +40,18 @@ library(tidyverse)
 x = rnorm(10)
 prob2_df = tibble(
   x = x, 
-  vec_logical = x>0,
+  vec_logical = x > 0,
   vec_char = c("This", "is","hw","1","Problem","2","for","P8105","DS","course"),
   vec_factor = factor(rep(c("A", "B", "C"), length.out = 10)))
 print(prob2_df)
 ```
 
+Try to take the mean of each variable.
 
+```{r}
+mean(prob2_df |> pull(vec_logical))
+mean(prob2_df |> pull(vec_char))
+mean(prob2_df |> pull(vec_factor))
+```
+
+By trying to take the mean of each variable, "vec_logical" worked, the other two didn't.
