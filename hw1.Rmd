@@ -69,3 +69,4 @@ mean(num_char)
 mean(num_factor)
 ```
 
+Now I can calculate the means for all three because the "uncalculatable" nominal variables are now converted to numbers by the **as.numeric()** function. The logical variable works as TRUE and FALSE were converted to "1" and "0". Although the character variable is coerced to numeric, we still get a **NA** as its mean cannot be actually calculated. Factor variables are now converted to integer codes so a mean can be calculated. This explained why I failed the first time. Nominal variables like charater and factor variables cannot be directly averaged by R unless they were converted to numeric.
