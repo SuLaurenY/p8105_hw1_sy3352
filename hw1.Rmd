@@ -6,6 +6,9 @@ date: "2025-09-20"
 ---
 
 ## Problem 1
+
+Load the data set.
+
 ```{r}
 library(moderndive)
 data("early_january_weather")
@@ -26,4 +29,21 @@ From the scatterplot, we can see that in general, the weather become warmer as d
 ```{r}
 ggsave("temp_vs_time.png")
 ```
+
+## Problem 2
+Create a random sample and vectors.
+```{r, include = FALSE}
+library(tidyverse)
+```
+
+```{r}
+x = rnorm(10)
+prob2_df = tibble(
+  x = x, 
+  vec_logical = x>0,
+  vec_char = c("This", "is","hw","1","Problem","2","for","P8105","DS","course"),
+  vec_factor = factor(rep(c("A", "B", "C"), length.out = 10)))
+print(prob2_df)
+```
+
 
