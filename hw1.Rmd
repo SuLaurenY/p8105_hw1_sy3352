@@ -21,4 +21,9 @@ ggplot(early_january_weather,
        aes(x = time_hour, y = temp, color = humid)) + 
   geom_point(alpha = .5)
 ```
+From the scatterplot, we can see that in general, the weather become warmer as days go by in early January. There is a clear cycle that each day the temperature rise up in the day time and goes down in the night time, and is repeated each day. Humidity tends to be lower when temperatures are high (around midday). However, between Jan 11th to Jan 14th, the temperature remain relatively stable through out day and night and has a constant high humidity.
+
+```{r}
+ggsave("temp_vs_time.png")
+```
 
